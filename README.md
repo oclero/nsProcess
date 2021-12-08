@@ -2,17 +2,18 @@
 
 `nsProcess` is a NSIS plugin that allows to handle processes (checking if a process is running, killing it, etc.). It is very useful to check if your the application you're trying to install is not currently running at the same time of the installer.
 
-This repository is just a convenient way to get up-to-date and pre-compiled files for the `nsProcess`.
+This repository is just a convenient way to get up-to-date and pre-compiled files for the `nsProcess`. It is a fork that benefits from [simdsoft improvements](https://github.com/simdsoft/nsProcess).
 
 ## Credits
 
-Its original source files were downloaded from <https://nsis.sourceforge.io/NsProcess_plugin>.
+Its original source files were downloaded from [its official page](https://nsis.sourceforge.io/NsProcess_plugin), based itself on the files provided in [NSIS forums](http://forums.winamp.com/showthread.php?t=230998).
 
 - Its original author is [Shengalts Aleksander](Shengalts@mail.ru).
 - Source function `FIND_PROC_BY_NAME` based upon [Ravi Kochhar](kochhar@physiology.wisc.edu) code.
 - `FindProcDLL` plugin by iceman_k.
 - `KillProcDLL` plugin by DITMan.
 - NSIS UNICODE-compatible version (1.6) by brainsucker.
+- Various improvements by simdsoft.
 
 ## Features
 
@@ -157,3 +158,9 @@ Var /GLOBAL noMoreAppsAreRunning
 
 !insertmacro CheckIfAppIsRunning
 ```
+
+## License
+
+This software is licensed under the [zlib license](https://opensource.org/licenses/zlib-license.php).
+
+Copyright (c) 2021 Shengalts Aleksander.
