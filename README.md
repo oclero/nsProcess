@@ -25,12 +25,27 @@ Its original source files were downloaded from <https://nsis.sourceforge.io/NsPr
 - Small plugin size (4 Kb).
 - NSIS UNICODE support.
 
+## Build
+
+1. Get submodules.
+
+    ```sh
+    git submodule update --init --recursive`
+    ```
+
+2. Use the Visual Studio solution provided, with the IDE or directly from CLI:
+
+    ```powershell
+    Invoke-Native-Command -Command "msbuild" `
+                -Arguments ("nsProcess.sln", '/p:Configuration="Release UNICODE"', "/p:Platform=Win32")
+    ```
+
 ## Installation
 
 - `nsProcess.nsh` goes to `C:\Program Files (x86)\NSIS\Include`
-- `nsProcess.dll` goes to:
-  - ANSI: `C:\Program Files (x86)\NSIS\Plugins\x86-ansi`
-  - Unicode: `C:\Program Files (x86)\NSIS\Plugins\x86-unicode`
+- `nsProcess.dll` goes to: `C:\Program Files (x86)\NSIS\Plugins\x86-ansi`
+- `nsProcess_unicode.dll` goes to: `C:\Program Files (x86)\NSIS\Plugins\x86-unicode`
+  - NB: Rename it `nsProcess.dll`.
 
 ## Usage
 
