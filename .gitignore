@@ -1,0 +1,9 @@
+[Dd]ebug/
+[Dd]ebug\ UNICODE/
+[Rr]elease/
+[Rr]elease\ UNICODE/
+.vs/
+*.suo
+x64/
+x86/
+Generated\ Files/
